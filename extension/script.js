@@ -1,10 +1,10 @@
-replaceText(document.body)
+replaceText(document.body, "covid")
 
-function replaceText(element) {
+function replaceText(element, newWord) {
     if(element.hasChildNodes()){
         element.childNodes.forEach(replaceText)
     }   else if (element.nodeType === Text.TEXT_NODE){
-        if(element.textContent.match(/fdnsfjh/gi)){
+        if(element.textContent.match(newWord)){
             element.parentElement.remove();
         }
     }   
